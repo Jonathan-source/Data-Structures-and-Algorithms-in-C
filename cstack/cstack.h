@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <errno.h>
 
 #ifndef CSTACK_MAX_SIZE
 #define CSTACK_MAX_SIZE 100
