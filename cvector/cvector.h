@@ -33,7 +33,7 @@ void cvector_resize(cvector_t* v, unsigned int new_capacity);
 
 /// @brief Appends an element to the end of a cvector_t
 /// @param v is the given cvector_t
-/// @param element 
+/// @param element is the new element
 void cvector_push_back(cvector_t* v, void* element);
 
 /// @brief Return the element at a given index in the given cvector_t
@@ -54,7 +54,7 @@ void cvector_set(cvector_t* v, int index, void* element);
 /// @param element is the new element
 void cvector_insert(cvector_t* v, int index, void* element);
 
-/// @brief // Removes the element at a given index the given cvector_t
+/// @brief Removes the element at a given index the given cvector_t
 /// @param v is the given cvector_t
 /// @param index is the given index
 void cvector_remove(cvector_t* v, int index);
