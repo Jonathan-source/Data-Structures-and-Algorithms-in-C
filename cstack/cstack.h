@@ -42,8 +42,7 @@ typedef struct {
     void* data;
     unsigned long long element_size;
     int elements;
-    enum cstack_error error;
-}cstack_t;
+} cstack_t;
 
 cstack_t* cstack_create(unsigned long long element_size) {
     if (element_size == 0) {
