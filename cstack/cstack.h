@@ -37,6 +37,6 @@ enum cstack_error cstack_push(cstack_t* stack, const void* element);
 
 enum cstack_error cstack_pop(cstack_t* stack, void** element);
 
-void cstack_free(cstack_t* stack);
+void cstack_free(cstack_t** stack);
 
 #endif // CSTACK_H
