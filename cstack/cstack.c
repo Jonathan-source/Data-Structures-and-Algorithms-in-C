@@ -71,10 +71,16 @@ enum cstack_error cstack_pop(cstack_t* stack, void** element) {
     return CSTACK_SUCCESS;
 }
 
-void cstack_free(cstack_t* stack) {
-    if (stack == NULL) {
+void cstack_free(cstack_t** stack) {
+    if (stack == NULL || *stack == NULL) {
         return;
     }
-    free(stack->data);
-    free(stack);
+    if ((*stack)->data != NULL) {
+        free((*stack)->data);
+        (*stack)->data = NULL;
+    }
+    if (*stack != NULL) {
+        free(*stack);
+        *stack = NULL;
+    }
 }
