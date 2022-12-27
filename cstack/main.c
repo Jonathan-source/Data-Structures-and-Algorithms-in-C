@@ -87,7 +87,10 @@ void test_stack() {
         return;
     }
 
-    cstack_free(stack);
+    cstack_free(&stack);
+    if (stack != NULL) {
+        printf("Error deallocating stack\n");
+    }
 
     printf("All tests passed\n");
 }
